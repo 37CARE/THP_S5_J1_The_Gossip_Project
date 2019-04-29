@@ -1,19 +1,19 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">BIENVENUE <%= params[:first_name] %>! </h1>
-    <p class="lead">Ici c'est notre super site de potins, il est chouette, non ?</p>
+    <h1 class="display-4">WELCOME <span class="badge badge-secondary"><%= params[:first_name] %>! </span></h1>
+    <p class="lead">Ici on aime raconter la vie des autres</p>
   </div>
 </div>
 
-<div class="col-md-12 text-center card-columns">
+<div class="col-sm text-center card-columns">
             <% Gossip.all.each do |gossip| %>
             <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title"><%= gossip.title %></h5>
-                <p class="card-text">Written by <%= gossip.user.first_name%> <%= gossip.user.last_name%> </p>
-                <a href="../gossip/<%= gossip.id %>" class="btn btn-primary">More details on this gossip</a>
-            </div>
+              <div class="card-body">
+                  <h5 class="card-title"><%= gossip.title %></h5>
+                  <p class="card-text">Ecrit par <%= gossip.user.first_name%> <%= gossip.user.last_name%> </p>
+                  <a href="../gossip/<%= gossip.id %>" class="btn btn-primary">Tu veux en savoir plus sur ce gossip?</a>
+              </div>
             </div>
         <% end %>
     </div>
