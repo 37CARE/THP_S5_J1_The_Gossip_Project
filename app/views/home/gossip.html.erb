@@ -6,9 +6,9 @@
   </div>
 </div>
 
-<div class="col-sm text-center card-columns">
+<div class="col-sm text-center card-columns ">
             <% Gossip.all.each do |gossip| %>
-            <div class="card" style="width: 18rem;">
+            <div class="card shadow p-3 mb-5 bg-white" style="width: 18rem;">
               <div class="card-body">
                   <h5 class="card-title"><%= gossip.title %></h5>
                   <p class="card-text">Ecrit par <%= gossip.user.first_name%> <%= gossip.user.last_name%> </p>

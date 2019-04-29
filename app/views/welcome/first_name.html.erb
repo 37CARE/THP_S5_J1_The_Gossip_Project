@@ -5,15 +5,3 @@
     <p class="lead">Ici c'est notre super site de potins, il est chouette, non ?</p>
   </div>
 </div>
-
-<div class="col-md-12 text-center card-columns">
-            <% Gossip.all.each do |gossip| %>
-            <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title"><%= gossip.title %></h5>
-                <p class="card-text">Written by <%= gossip.user.first_name%> <%= gossip.user.last_name%> </p>
-                <a href="../gossip/<%= gossip.id %>" class="btn btn-primary">More details on this gossip</a>
-            </div>
-            </div>
-        <% end %>
-    </div>
